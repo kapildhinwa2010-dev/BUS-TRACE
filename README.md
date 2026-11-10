@@ -9,9 +9,7 @@ In a residual-stream model, every block adds a write to a shared vector. BUS-TRA
 - Per-block write norms and write shares.
 - Cumulative stream norm growth after each block.
 - Flags silent blocks and the dominant writer.
-NaN
 - Pure NumPy core; optional PyTorch hook adapter.
-```
 
 ## Install
 
