@@ -27,4 +27,4 @@ FAILED tests/test_trace.py::test_basic_report - assert 20.0 == 40.0 ± 4.0e-05
   comparison failed
   Obtained: 20.0
   Expected: 40.0 ± 4.0e-05
-1 failed, 4 passed in 0.12s
+1 failed, 4 passed in 0.09s
