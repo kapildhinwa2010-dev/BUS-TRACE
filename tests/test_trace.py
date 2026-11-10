@@ -15,8 +15,9 @@ def test_basic_report():
     assert r["silent_blocks"] == [1]
     assert r["dominant_block"] == 0
     assert r["growth"][0] is None
-    assert r["stream_norms"][0] == pytest.approx(40.0)
-    assert r["stream_norms"][1] == pytest.approx(40.0)
+    assert r["stream_norms"][0] == pytest.approx(20.0)
+    assert r["stream_norms"][1] == pytest.approx(20.0)
+    assert r["stream_norms"][2] == pytest.approx(np.sqrt(20.0 ** 2 + 4.0 ** 2))
 
 
 def test_stream_norm_growth():
@@ -24,7 +25,6 @@ def test_stream_norm_growth():
     w1 = np.ones((2, 3)) * 2.0
     r = write_report([w0, w1])
     assert r["stream_norms"][0] == pytest.approx(np.sqrt(6))
-    # second write is parallel, so the norm adds linearly
     assert r["stream_norms"][1] == pytest.approx(3.0 * np.sqrt(6))
     assert r["growth"][1] == pytest.approx(3.0)
 
