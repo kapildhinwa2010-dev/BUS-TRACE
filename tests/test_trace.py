@@ -17,7 +17,8 @@ def test_basic_report():
     assert r["growth"][0] is None
     assert r["stream_norms"][0] == pytest.approx(20.0)
     assert r["stream_norms"][1] == pytest.approx(20.0)
-    assert r["stream_norms"][2] == pytest.approx(np.sqrt(20.0 ** 2 + 4.0 ** 2))
+    # 10*eye + ones: four entries of 11 and twelve entries of 1
+    assert r["stream_norms"][2] == pytest.approx(np.sqrt(496.0))
 
 
 def test_stream_norm_growth():
