@@ -13,18 +13,20 @@ ______________________________ test_basic_report _______________________________
         assert r["silent_blocks"] == [1]
         assert r["dominant_block"] == 0
         assert r["growth"][0] is None
->       assert r["stream_norms"][0] == pytest.approx(40.0)
-E       assert 20.0 == 40.0 ± 4.0e-05
+        assert r["stream_norms"][0] == pytest.approx(20.0)
+        assert r["stream_norms"][1] == pytest.approx(20.0)
+>       assert r["stream_norms"][2] == pytest.approx(np.sqrt(20.0 ** 2 + 4.0 ** 2))
+E       assert 22.271057451320086 == 20.396078054371138 ± 2.0e-05
 E         
 E         comparison failed
-E         Obtained: 20.0
-E         Expected: 40.0 ± 4.0e-05
+E         Obtained: 22.271057451320086
+E         Expected: 20.396078054371138 ± 2.0e-05
 
-tests/test_trace.py:18: AssertionError
+tests/test_trace.py:20: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_trace.py::test_basic_report - assert 20.0 == 40.0 ± 4.0e-05
+FAILED tests/test_trace.py::test_basic_report - assert 22.271057451320086 == 20.396078054371138 ± 2.0e-05
   
   comparison failed
-  Obtained: 20.0
-  Expected: 40.0 ± 4.0e-05
-1 failed, 4 passed in 0.09s
+  Obtained: 22.271057451320086
+  Expected: 20.396078054371138 ± 2.0e-05
+1 failed, 4 passed in 0.13s
