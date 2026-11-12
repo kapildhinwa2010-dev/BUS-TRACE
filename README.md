@@ -1,5 +1,7 @@
 # BUS-TRACE
 
+[![Stars](https://img.shields.io/github/stars/kapildhinwa2010-dev/BUS-TRACE?style=flat-square)](https://github.com/kapildhinwa2010-dev/BUS-TRACE/stargazers) [![Forks](https://img.shields.io/github/forks/kapildhinwa2010-dev/BUS-TRACE?style=flat-square)](https://github.com/kapildhinwa2010-dev/BUS-TRACE/network/members) [![Issues](https://img.shields.io/github/issues/kapildhinwa2010-dev/BUS-TRACE?style=flat-square)](https://github.com/kapildhinwa2010-dev/BUS-TRACE/issues) [![Top language](https://img.shields.io/github/languages/top/kapildhinwa2010-dev/BUS-TRACE?style=flat-square)](https://github.com/kapildhinwa2010-dev/BUS-TRACE)
+
 See who writes what into the residual stream, block by block.
 
 In a residual-stream model, every block adds a write to a shared vector. BUS-TRACE takes those writes and reports the write norm and share of every block, the stream norm growth curve, silent blocks (under 1% share), and the dominant writer.
